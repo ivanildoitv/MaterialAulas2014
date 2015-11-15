@@ -1,0 +1,33 @@
+* {
+	font-family: Arial;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	height: 100px;
+	margin: 0 auto 0 auto;
+	
+}
+
+#d1 {
+	background: #ff0000;
+}
+
+#d2 {
+	background: #00ff00;
+	visibility: hidden;
+}
+
+#d3 {
+	background: #0000ff;
+	margin-bottom: 10px;
+}
+
+#d4 {
+	background: #ff00ff;
+}
+
+#d5 {
+	background: #ffff00;
+}

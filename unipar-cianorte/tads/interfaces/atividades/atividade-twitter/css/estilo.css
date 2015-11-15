@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+#topo {
+    background: #000000 url(../img/topo.png);
+}
+
+#topo div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    position: relative;
+    height: 40px;
+}
+
+#topo div a {
+    position: absolute;
+    right: 10px;
+    font-size: 13px;
+    color: #FFFFFF;
+    text-decoration: none;
+    top: 13px;
+    background-image: url(../img/flecha.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 8px;
+}
+
+#topo div img {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+body {
+    background-image: url(../img/fundo.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #000000;
+}
+
+#conteudo {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#textog {
+    position: absolute;
+    width: 360px;
+    left: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+    top: 70px;
+}
+
+#textog * {
+    margin-bottom: 10px;
+}
+
+#signin, #signup {
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #CECECE 100%);
+    /* background-color: #FFFFFF; */
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 390px;
+    padding: 10px 10px 2px 10px;
+    border: 1px solid #CCCCCC;
+}
+
+#signin {
+    margin-top: 120px;
+}
+
+#signin input,
+#signup input {
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    display: block;
+    font-size: 15px;
+    padding: 4px 3px 4px 3px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#signin label,
+#signup label {
+    display: none;
+}
+
+#signin-submit,
+#signup-submit {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#signin-submit {
+    background-image: linear-gradient(to bottom, rgb(51, 188, 239) 0%, rgb(1, 154, 210) 100%) !important;
+    /* background-image: url(../img/sprite-1.png) !important; */
+    /* background-position: left -140px !important; */
+    color: #FFF;
+    width: 83px !important;
+    border-color: #0066FF !important;
+}
+
+#signin-senha {
+    width: 187px !important;
+    float: left;
+    margin-right: 8px;
+}
+
+
+#rodape {
+    width: 100%;
+    
+    position: absolute;
+    bottom: 20px;
+}
+
+#rodape ul {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#rodape li {
+    display: inline;
+    font-size: 10px;
+}
+
+#rodape li,
+#rodape li a
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* #rodape li {
+    display: inline;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+#rodape li a
+{
+    color: inherit;
+} */
+
+@media print {
+    #signin, #signup {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

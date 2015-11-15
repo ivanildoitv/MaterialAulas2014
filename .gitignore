@@ -9,4 +9,15 @@
 
 # Arquivos gedit
 *~
-/unipar-cianorte/tads/servicos-internet/design-patterns-php/scripts/dao-do/nbproject/private/
+
+# Arquivos netbeans
+/unipar-cianorte/tads/servicos-internet/design-patterns-php/scripts/dao-do/nbproject/
+/unipar-cianorte/tads/servicos-internet/ajax/script/nbproject/
+/unipar-cianorte/tads/aplicacoes-web/sistema-venda/nbproject/
+/unipar-cianorte/tads/servicos-internet/atividades/ajax-uf/nbproject/
+
+# Zend Framework
+/unipar-cianorte/tads/servicos-internet/zend-framework/sistema/private/library/Zend
+
+# UrnaEletronicaHTML5
+/unipar-cianorte/tads/interfaces/UrnaEletronicaHTML5/nbproject/

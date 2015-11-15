@@ -1,5 +1,6 @@
 <?php
 
+require './protege.php';
 require './config.php';
 require './lib/funcoes.php';
 require './lib/conexao.php';
@@ -10,7 +11,7 @@ require './lib/conexao.php';
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TecInfo Vendas Unipar</title>
+    <title>TecInfo Unipar</title>
 
     <?php headCss(); ?>
   </head>
@@ -22,7 +23,7 @@ require './lib/conexao.php';
 
 <div class="jumbotron">
   <div class="container">
-    <h1>TecInfo Vendas Unipar</h1>
+    <h1>TecInfo Unipar</h1>
     <p>Bem vindo Alisson Chiquitto</p>
     <p>
       <div class="btn-group">
@@ -49,7 +50,7 @@ require './lib/conexao.php';
         </a>
       </div>
 
-      <div class="btn-group">
+      <!--<div class="btn-group">
         <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown">
           <i class="fa fa-bar-chart-o fa-lg"></i>  Relatórios <span class="caret"></span>
         </button>
@@ -58,7 +59,7 @@ require './lib/conexao.php';
           <li><a href="rel-produtos.php">Produtos</a></li>
           <li><a href="rel-vendas.php">Vendas</a></li>
         </ul>
-      </div>
+      </div>-->
     </p>
   </div>
 </div>

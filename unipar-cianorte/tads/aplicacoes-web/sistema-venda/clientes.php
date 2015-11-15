@@ -1,9 +1,14 @@
 <?php
 
+require './protege.php';
 require './config.php';
 require './lib/funcoes.php';
 require './lib/conexao.php';
 
+$q ='';
+if(isset($_GET['q'])){
+  $q =trim($_GET['q']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -25,12 +30,14 @@ require './lib/conexao.php';
 </div>
 
 <div class="panel panel-default">
-  <div class="panel-heading">Clientes</div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Clientes</h3>
+  </div>
   <div class="panel-body">
     <form class="form-inline" role="form" method="get" action="">
       <div class="form-group">
         <label class="sr-only" for="fq">Pesquisa</label>
-        <input type="search" class="form-control" id="fq" name="q" placeholder="Pesquisa" value="">
+        <input type="search" class="form-control" id="fq" name="q" placeholder="Pesquisa" value="<?php echo $q; ?>">
       </div>
       <button type="submit" class="btn btn-default">Pesquisar</button>
     </form>
@@ -46,18 +53,33 @@ require './lib/conexao.php';
       </tr>
     </thead>
     <tbody>
+      <?php
+        $sql = "select * from cliente";
+        if($q != ''){
+          $sql .= " where nome like '%$q%'"; 
+        }
+      
+        $consulta = mysqli_query($con,$sql);
+        while( $resultado = mysqli_fetch_assoc($consulta)){
+      ?>
       <tr>
-        <td>{id}</td>
+        <td><?php echo $resultado['idcliente'];   ?></td>
         <td>
+          <?php if($resultado['ativo'] == CLIENTE_ATIVO){  ?>
           <span class="label label-success">ativo</span>
+          <?php } else { ?>
           <span class="label label-warning">inativo</span>
+          <?php } ?>
         </td>
-        <td>{nome}</td>
+        <td><?php echo $resultado['nome']; ?></td>
         <td>
-          <a href="" title="Editar cliente"><i class="fa fa-edit fa-lg"></i></a>
-          <a href="" title="Remover cliente"><i class="fa fa-times fa-lg"></i></a>
+          <a href="clientes-editar.php?idcliente=<?php echo $resultado['idcliente'];?>" title="Editar cliente"><i class="fa fa-edit fa-lg"></i></a>
+          <a href="clientes-apagar.php?idcliente=<?php echo $resultado['idcliente'];?>" title="Remover cliente"><i class="fa fa-times fa-lg"></i></a>
+          <a href="venda-nova.php?idcliente=<?php echo $resultado['idcliente'];?>" title="Nova Venda"><i class="fa fa-share fa-lg"></i></a>
         </td>
-      </tr>
+      </tr><?php
+    }
+      ?>
     </tbody>
   </table>
 </div>

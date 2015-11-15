@@ -1,0 +1,36 @@
+<?php echo $this->doctype() ?>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zend Framework Quickstart Application</title>
+  <base href="<?php echo URL_BASE; ?>">
+  <?php echo $this->headLink()->appendStylesheet('css/global.css') ?>
+</head>
+<body>
+<div id="header">
+    <div id="header-logo">
+        <strong>ZF Quickstart Application</strong>
+    </div>
+    <div id="header-navigation">
+        <?php echo $this->navigation(); ?>
+    </div>
+    <div id="header-breadcrumbs">
+        Você esta em: <?php
+        echo $this->navigation()
+                ->breadcrumbs()
+                ->setLinkLast(true)
+                ->setMinDepth(0)
+                ->setSeparator(' - ')
+                ->render();
+        ?>
+    </div>
+</div>
+
+    <hr>
+<?php echo $this->layout()->content ?>
+    <hr>
+    
+    <div>Rodape</div>
+
+</body>
+</html>
